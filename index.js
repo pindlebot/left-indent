@@ -1,6 +1,6 @@
 const leftPad = (text, spaces) => `${(new Array(spaces >= 0 ? spaces : 0)).fill(' ').join('')}${text}`
 
-const leftIndent = (text, direction = 'forward', tabSize = 2) => {
+function leftIndent (text, direction = 'forward', tabSize = 2) {
   const matchArr = text.match(/^(\s*)([\s\S]+)$/m)
   const spaces = matchArr[1].length
   const trimmedLeft = matchArr[2]
@@ -21,4 +21,5 @@ const leftIndent = (text, direction = 'forward', tabSize = 2) => {
   return leftPad(trimmedLeft, spaces + delta)
 }
 
-(module.exports = leftIndent).leftIndent = leftIndent
+module.exports.leftPad = leftPad
+module.exports.leftIndent = leftIndent

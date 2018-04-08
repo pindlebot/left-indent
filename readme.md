@@ -5,7 +5,7 @@ leftIndent (text, direction = 'forward', tabSize = 2) => indentedText
 ## Examples
 
 ```js
-const leftIndent = require('left-indent')
+const { leftIndent } = require('left-indent')
 
 leftIndent (' some text', 'forward') 
 // => '  some text' 
