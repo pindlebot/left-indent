@@ -1,5 +1,7 @@
 ## left-indent
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/unshift/left-indent.svg)](https://greenkeeper.io/)
+
 leftIndent (text, direction = 'forward', tabSize = 2) => indentedText
 
 ## Examples
