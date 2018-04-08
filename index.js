@@ -5,17 +5,15 @@ const leftIndent = (text, direction = 'forward', tabSize = 2) => {
   const spaces = matchArr[1].length
   const trimmedLeft = matchArr[2]
   let delta = 0
-  let isEven = spaces % 2 === 0
-  
-  if (direction === 'forward') {
-    if (isEven) {
+  if (spaces % 2 === 0) {
+    if (direction === 'forward') {
       delta += tabSize
     } else {
-      delta++
-    }
-  } else if (direction === 'backward') {
-    if (isEven) {
       delta -= tabSize
+    }
+  } else {
+    if (direction === 'forward') {
+      delta++
     } else {
       delta--
     }
