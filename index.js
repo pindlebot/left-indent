@@ -1,6 +1,6 @@
 const pad = spaces => new Array(spaces >= 0 ? spaces : 0).fill(' ').join('')
 
-const getPadding = (
+const leftIndent = (
   text,
   direction = 'forward',
   tabSize = 2
@@ -22,18 +22,8 @@ const getPadding = (
       delta--
     }
   }
-  return pad(delta)
-}
-
-const leftIndent = (
-  text,
-  direction = 'forward',
-  tabSize = 2
-) => {
-  const indent = getPadding(text, direction, tabSize)
-  return `${indent}${text}`
+  return `${pad(spaces + delta)}${trimmedLeft}`
 }
 
 module.exports.pad = pad
-module.exports.getPadding = getPadding
 module.exports.leftIndent = leftIndent
