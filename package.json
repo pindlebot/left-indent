@@ -4,5 +4,11 @@
   "main": "index.js",
   "repository": "https://github.com/unshift/left-indent.git",
   "author": "unshift",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^23.3.0"
+  }
 }
